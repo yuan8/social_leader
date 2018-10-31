@@ -14,3 +14,22 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->get('/generate-token', function () use ($router) {
+    // return $router->app->version();
+    return view('index');
+});
+
+
+$router->get('/privacy-policy', function () use ($router) {
+    // return $router->app->version();
+    return view('index');
+});
+
+
+$router->get('/return/insta/regist-token', function () use ($router) {
+    // return $router->app->version();
+    return view('index');
+});
+
