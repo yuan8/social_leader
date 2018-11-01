@@ -33,3 +33,9 @@ $router->get('/return/insta/regist-token', function () use ($router) {
     return view('index');
 });
 
+
+$router->get('key', function () use ($router) {
+    // return $router->app->version();
+    return str_random(32);
+});
+
