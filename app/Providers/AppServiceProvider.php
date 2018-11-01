@@ -15,14 +15,19 @@ class AppServiceProvider extends ServiceProvider
      */
 
    	public function boot(UrlGenerator $url){
-   		
-		Schema::defaultStringLength(191);
+        
+   		 if(env('REDIRECT_HTTPS'))
+		  {
+		    $url->forceSchema('https');
+		  }
+		
+		  Schema::defaultStringLength(191);
 	}
 
     public function register()
     {
+      
 
-       URL::forceScheme('https');
 
     }
 }

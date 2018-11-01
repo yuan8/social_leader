@@ -92,8 +92,8 @@ $app->singleton(
 | can respond to, as well as the controllers that may handle them.
 |
 */
-$app->configure('forcehttps');
-$app->register(CSUNMetaLab\LumenForceHttps\Providers\ForceHttpsServiceProvider::class);
+// $app->configure('forcehttps');
+// $app->register(CSUNMetaLab\LumenForceHttps\Providers\ForceHttpsServiceProvider::class);
 // $app->middleware([
 //    CSUNMetaLab\LumenForceHttps\Http\Middleware\ForceHttps::class,
 // ]);
