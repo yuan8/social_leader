@@ -48,6 +48,7 @@ $app->singleton(
     App\Console\Kernel::class
 );
 
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
@@ -78,9 +79,9 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\EventServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -92,11 +93,6 @@ $app->singleton(
 | can respond to, as well as the controllers that may handle them.
 |
 */
-// $app->configure('forcehttps');
-// $app->register(CSUNMetaLab\LumenForceHttps\Providers\ForceHttpsServiceProvider::class);
-// $app->middleware([
-//    CSUNMetaLab\LumenForceHttps\Http\Middleware\ForceHttps::class,
-// ]);
 
 $app->router->group([
     'namespace' => 'App\Http\Controllers',

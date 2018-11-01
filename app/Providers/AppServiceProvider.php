@@ -4,24 +4,20 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Routing\UrlGenerator;
-use Illuminate\Support\Facades\URL;
+use Laravel\Lumen\Routing\UrlGenerator;
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
+   
+   
 
    	public function boot(UrlGenerator $url){
-        
+
    		 if(env('REDIRECT_HTTPS'))
 		  {
 		    $url->forceSchema('https');
 		  }
 		
-		  Schema::defaultStringLength(191);
+		  // Schema::defaultStringLength(191);
 	}
 
     public function register()

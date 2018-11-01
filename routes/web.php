@@ -11,10 +11,6 @@
 |
 */
 
- if(env('REDIRECT_HTTPS'))
-  {
-    $url->forceSchema('https');
-  }
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
